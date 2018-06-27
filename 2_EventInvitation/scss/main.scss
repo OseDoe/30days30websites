@@ -1,0 +1,150 @@
+// Import CSS Reset
+@import "../../0_vendor/reset";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto|Spirax');
+
+// Color Palette
+:root {
+    --blue: #47668f;
+    --brown: #a89289; // rgb(168,146,137)
+    --white: white;
+}
+
+// General Styles
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spirax', cursive;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3.2em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+button {
+    background-color: var(--blue);
+    border: none;
+    border-radius: 2px;
+    color: var(--white);
+    font-family: roboto;
+    font-size: .9em;
+    letter-spacing: 2px;
+    margin-bottom: 0.6em;
+    padding: .8em;
+    text-transform: uppercase;
+    transition: transform 300ms ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.2, 1.2);
+}
+
+button:focus {
+    background-color: var(--white);
+}
+
+// Navigation
+nav {
+
+    ul {
+        display: grid;
+        align-items: center;
+        
+        li {
+
+            a {
+                color: var(--blue);
+                display: block;
+                transition: transform 300ms ease-in-out;
+                padding: 0.5em;
+            }
+
+            a:hover {
+                color: var(--brown);
+                text-decoration: underline;
+                transform: scale(1.4, 1.2);
+            }            
+        }
+    }
+}
+
+// Jumbotron
+header {
+    background: url("../img/bride-clouds-daylight-949224.jpg") center center fixed no-repeat;
+    background-size: cover;
+    height: 90vh;
+    display: grid;
+    align-content: center;
+
+    .title-wrapper {
+        align-items: center;
+        background-color: rgba(168,146,137, 0.2);
+        color: var(--white);    
+        display: grid;
+        grid-gap: 20px;
+        
+        overflow: auto;
+        padding: 1em;
+        text-shadow: 1px 1px 0 #282828;
+
+
+
+    }
+}
+
+// Footer
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+
+    p {
+        padding: 0.6em;
+
+        a {
+            color: var(--brown);
+        }
+
+        a:hover {
+            color: var(--naranja);
+            font-size: 1.1em;
+        }
+    }
+}
+
+
+// Media-Queries
+@media (min-width: 700px) {
+    nav {
+        height: 10vh;
+
+        ul {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+            li {
+                display: inline;
+                padding: 1.2em;
+
+                button {
+                margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
