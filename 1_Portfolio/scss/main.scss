@@ -2,58 +2,10 @@
 // All credits to http://bythebutterfly.com
 @font-face {
     font-family: Ness;
-    src: url("/misc/ness.ttf");
+    src: url("../misc/ness.ttf");
 }
 
-//===== CSS Reset =====//
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-//===== END CSS Reset =====//
+@import "../../0_vendor/reset";
 
 // Variables
 :root {
@@ -117,6 +69,7 @@ nav {
         #5A5454 20%,
         #333333
     );
+    border-bottom: 1px solid var(--yellow);
     color: var(--yellow);
     text-shadow: 2px 1px 1px var(--naranja);
     display: grid;
@@ -142,13 +95,19 @@ nav {
             list-style: none;
             padding: 0.6em;
         }
+
+        a:hover {
+           color: var(--naranja);
+           text-shadow: 2px 1px 1px black;
+            padding: 0.6em;
+        }
     }
 }
 
 // Jumbotron
 
 header {
-    background: url(/img/bojack1.jpg) center center fixed no-repeat;
+    background: url(../img/bojack1.jpg) center center fixed no-repeat;
     background-size: cover;
     display: grid;
     align-content: center;
@@ -168,6 +127,7 @@ header {
         var(--pale-yellow) 55%,
         var(--yellow)
     );
+    border-top: 1px solid var(--dark-horse);
     color: var(--dark-horse);
     display: grid;
     grid-gap: 20px;
@@ -238,7 +198,7 @@ footer {
 // Media-Queries
 @media (min-width: 700px) {
     nav {
-         grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 3fr;
     
         // Nav sections
         ul {
@@ -252,7 +212,4 @@ footer {
         grid-template-areas: 
             "horsing-around bojack-horseman secretariat";
     }
-
-    //
-
 }

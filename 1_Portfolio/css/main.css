@@ -1,6 +1,6 @@
 @font-face {
   font-family: Ness;
-  src: url("/misc/ness.ttf"); }
+  src: url("../misc/ness.ttf"); }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -89,6 +89,7 @@ a {
 nav {
   align-items: center;
   background: linear-gradient(to bottom, #5A5454 20%, #333333);
+  border-bottom: 1px solid var(--yellow);
   color: var(--yellow);
   text-shadow: 2px 1px 1px var(--naranja);
   display: grid; }
@@ -107,9 +108,13 @@ nav {
       display: inline;
       list-style: none;
       padding: 0.6em; }
+    nav ul a:hover {
+      color: var(--naranja);
+      text-shadow: 2px 1px 1px black;
+      padding: 0.6em; }
 
 header {
-  background: url(/img/bojack1.jpg) center center fixed no-repeat;
+  background: url(../img/bojack1.jpg) center center fixed no-repeat;
   background-size: cover;
   display: grid;
   align-content: center;
@@ -121,6 +126,7 @@ header {
 
 .work {
   background: linear-gradient(to bottom, var(--pale-yellow) 55%, var(--yellow));
+  border-top: 1px solid var(--dark-horse);
   color: var(--dark-horse);
   display: grid;
   grid-gap: 20px;
